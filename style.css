@@ -1,0 +1,569 @@
+:root {
+    --primary: #0d47a1;
+    --light: #bae2ff;
+    --dark: #08306b;
+    --bt: #2c76ff;
+    --white: #ffffff;
+    --gray: #bbdefb;
+    --kontak-bg: #ffffff;
+    --kontak-bg-hover: #c5e1f7;
+    --kontak-text: #1e3a8a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+nav {
+    background: transparent;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.img-logo {
+    width: 60px;
+    height: auto;
+    border-radius: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--gray);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0;
+    position: relative;
+    background: var(--primary);
+}
+
+.hero-left {
+    flex: 1;
+    padding: 4rem;
+    z-index: 1;
+    color: var(--dark);
+}
+
+.hero-right {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+.hero button {
+    padding: 0.8rem 2rem;
+    border: none;
+    background: var(--bt);
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero button:hover {
+    background: #000dff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+section {
+    padding: 5rem 2rem;
+}
+
+.carousel-container-renov {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 600px;
+    margin: 0;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+.carousel-images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    pointer-events: none;
+    border-radius: 0 20px 20px 0;
+}
+
+.carousel-img.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-description {
+    width: 40%;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.carousel-description h2 {
+    margin-bottom: 60px;
+}
+
+.carousel-description .desc {
+    display: none;
+    font-size: 1.2rem;
+    animation: fadeIn 0.5s ease-in-out;
+    min-height: 60px;
+    top: 100px;
+}
+
+.carousel-description .desc.active {
+    display: block;
+}
+
+.carousel-description .desc-wrapper {
+    position: relative;
+    height: 100px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container-renov {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .carousel-wrapper,
+    .carousel-description {
+        width: 100%;
+        height: 300px;
+    }
+
+    .carousel-description {
+        padding: 1rem;
+    }
+}
+
+.about-box,
+.cards {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-box {
+    background: linear-gradient(135deg, #ffffff, #f0f4ff);
+    padding: 2.5rem;
+    border-left: 6px solid #2196f3;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    max-width: 1080px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+    transition: transform 0.3s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+}
+
+.about-box h2 {
+    font-size: 2rem;
+    color: #0d47a1;
+    margin-bottom: 1rem;
+}
+
+.about-box p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex: 0 0 calc(33.333% - 1rem);
+    flex-direction: column;
+    height: 450px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: calc(100% - 200px);
+    overflow-y: auto;
+}
+
+.card-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+}
+
+.card-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #0d47a1;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--white);
+    padding: 2rem;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer a {
+    color: var(--white);
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-details {
+    background: linear-gradient(to bottom, var(--primary), var(--light));
+    padding: 3rem 1rem;
+    color: var(--white);
+}
+
+.contact-details .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kontak-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.kontak-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.kontak-box {
+    background-color: var(--kontak-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kontak-box:hover {
+    transform: translateY(-5px);
+    background-color: var(
+        --kontak-bg-hover
+    );
+}
+
+.kontak-box p:first-of-type {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--kontak-text);
+    margin-bottom: 0.5rem;
+}
+
+.kontak-box p:last-of-type {
+    color: #0c2362;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.kontak-icon {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    display: block;
+    background-color: var(--primary);
+    padding: 1rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.kontak-icon:hover {
+    background-color: var(--light);
+    transform: scale(1.1);
+}
+
+.no-link-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 900px) {
+    .card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        background: var(--primary);
+        text-align: center;
+        background-image: none;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .card {
+        flex: 0 0 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+}
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-morph {
+    opacity: 0;
+    transform: scale(0.95);
+    border-radius: 20% 20% 20% 20%;
+    transition: all 1s ease;
+}
+
+.animate-morph.show {
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 0;
+}
+
+.animate-morph-riwayat::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, var(--primary), var(--light));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    pointer-events: none;
+}
+
+.animate-morph-riwayat.active::before {
+    opacity: 1;
+}
+
+#riwayat {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+
+.animate-left {
+    transform: translateX(-50px);
+}
+
+.animate-right {
+    transform: translateX(50px);
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
