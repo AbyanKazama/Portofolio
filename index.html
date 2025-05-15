@@ -1,176 +1,253 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Abyan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div class="logo">
-            <img src="img/sw.gif" class="img-logo" alt="">
-            <h2 class="logo-text">VarianT</h2>
-        </div>
-        <ul>
-            <li><a href="#riwayat">Riwayat</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#funfact">Fun Fact</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-        </ul>
+      <div class="logo">
+        <img src="img/sw.gif" class="img-logo" alt="" />
+        <h2 class="logo-text">VarianT</h2>
+      </div>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#riwayat">Riwayat</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#funfact">Fun Fact</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
     </nav>
 
     <section class="hero animate-morph animate">
-        <div class="hero-left">
-            <h1>Halo, Saya Abyan</h1>
-            <p>Selamat datang di portofolio saya. Saya seorang pengembang web dan UI/UX enthusiast.</p>
-            <button onclick="document.getElementById('riwayat').scrollIntoView({behavior:'smooth'})">Jelajahi</button>
-        </div>
-        <div class="hero-right">
-            <img src="img/march.gif" alt="Hero Image">
-        </div>
+      <div class="hero-left">
+        <h1>Halo, Saya Abyan</h1>
+        <p>
+          Selamat datang di portofolio saya. Saya seorang pengembang web dan
+          UI/UX enthusiast.
+        </p>
+        <button
+          onclick="document.getElementById('riwayat').scrollIntoView({behavior:'smooth'})"
+        >
+          Jelajahi
+        </button>
+      </div>
+      <div class="hero-right">
+        <img src="img/march.gif" alt="Hero Image" />
+      </div>
     </section>
 
-    <section id="riwayat" class="animate-morph-riwayat animate"
-        style="padding-top: 60px; padding-left:0; background: linear-gradient(to bottom, #0D47A1, #bae2ff);">
-        <div class="carousel-container-renov">
-            <div class="carousel-wrapper">
-                <div class="carousel-images">
-                    <img src="img/kafka.jpeg" class="carousel-img active" alt="Slide 1">
-                    <img src="img/acheron.jpeg" class="carousel-img" alt="Slide 2">
-                    <img src="img/acheron1.jpeg" class="carousel-img" alt="Slide 3">
-                </div>
-                <div class="carousel-controls">
-                    <button onclick="prevSlide()">❮</button>
-                    <button onclick="nextSlide()">❯</button>
-                </div>
-            </div>
-
-            <div class="carousel-description">
-                <h2>Riwayat Hidup</h2>
-                <div class="desc-wrapper">
-                    <div class="desc active">Pernah Praktik Kerja Lapangan di cyberlabs dan mengerjakan projek website
-                        serta aplikasi sederhana meggunakan rest API</div>
-                    <div class="desc">Membuat sebuah fungsi kalkulator sederhana untuk kasir pada Ujian Kompetensi</div>
-                    <div class="desc">Masih hidup di usia 17 tahun hingga detik ini</div>
-                </div>
-            </div>
+    <section
+      id="riwayat"
+      class="animate-morph-riwayat animate"
+      style="
+        padding-top: 60px;
+        padding-left: 0;
+        background: linear-gradient(to bottom, #0d47a1, #bae2ff);
+      "
+    >
+      <div class="carousel-container-renov">
+        <div class="carousel-wrapper">
+          <div class="carousel-images">
+            <img
+              src="img/kafka.jpeg"
+              class="carousel-img active"
+              alt="Slide 1"
+            />
+            <img src="img/acheron.jpeg" class="carousel-img" alt="Slide 2" />
+            <img src="img/acheron1.jpeg" class="carousel-img" alt="Slide 3" />
+          </div>
+          <div class="carousel-controls">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+          </div>
         </div>
+
+        <div class="carousel-description">
+          <h2>Riwayat Hidup</h2>
+          <div class="desc-wrapper">
+            <div class="desc active">
+              Pernah Praktik Kerja Lapangan di cyberlabs dan mengerjakan projek
+              website serta aplikasi sederhana meggunakan rest API
+            </div>
+            <div class="desc">
+              Membuat sebuah fungsi kalkulator sederhana untuk kasir pada Ujian
+              Kompetensi
+            </div>
+            <div class="desc">
+              Masih hidup di usia 17 tahun hingga detik ini
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="kontak" class="animate-left animate">
-        <div class="contact-container">
-            <h2 class="kontak-title">Profile</h2>
-            <div class="kontak-grid">
-                <div class="kontak-box">
-                    <a href="https://open.spotify.com/user/p77j318awimfde8g7v6k7boyd?si=UBciYJizSZCz5BoH4H3_gA" target="_blank"><i class="fab fa-spotify kontak-icon"></i></a>
-                    <p>Spotify</p>
-                    <p>VAR-A-106</p>
-                </div>
-                <div class="kontak-box">
-                    <a href="https://github.com/AbyanKazama" target="_blank"><i class="fab fa-github kontak-icon"></i></a>
-                    <p>Github</p>
-                    <p>Abyan_Kazama</p>
-                </div>
-                <div class="kontak-box">
-                    <a href="https://discord.gg/g6EKN8B8" target="_blank"><i class="fab fa-discord kontak-icon"></i></a>
-                    <p>Discord</p>
-                    <p>Absurd Server / <a href="https://discord.com/invite/J7C6aKeH" target="_blank" class="no-link-style">abyan106</a></p>
-                </div>
-                <div class="kontak-box">
-                    <a href="https://www.instagram.com/vart_106/" target="_blank"><i class="fas fa-palette kontak-icon"></i></a>
-                    <p>Art</p>
-                    <p><a href="https://www.instagram.com/variant_a_16/" target="_blank" class="no-link-style">variant_a_16</a> / <a href="https://www.instagram.com/vart_106/" target="_blank" class="no-link-style">vart_16</a></p>
-                </div>
-            </div>
+      <div class="contact-container">
+        <h2 class="kontak-title">Profile</h2>
+        <div class="kontak-grid">
+          <div class="kontak-box">
+            <a href="https://www.instagram.com/variant_a_16/" target="_blank"
+              ><i class="fab fa-instagram kontak-icon"></i
+            ></a>
+            <p>Instagram</p>
+            <p>variant_a_16</p>
+          </div>
+          <div class="kontak-box">
+            <a href="https://github.com/AbyanKazama" target="_blank"
+              ><i class="fab fa-github kontak-icon"></i
+            ></a>
+            <p>Github</p>
+            <p>Abyan_Kazama</p>
+          </div>
+          <div class="kontak-box">
+            <a href="https://discord.gg/g6EKN8B8" target="_blank"
+              ><i class="fab fa-discord kontak-icon"></i
+            ></a>
+            <p>Discord</p>
+            <p>
+              Absurd Server /
+              <a
+                href="https://discord.com/invite/J7C6aKeH"
+                target="_blank"
+                class="no-link-style"
+                >abyan106</a
+              >
+            </p>
+          </div>
+          <div class="kontak-box">
+            <a href="https://www.instagram.com/vart_106/" target="_blank"
+              ><i class="fas fa-palette kontak-icon"></i
+            ></a>
+            <p>Art</p>
+            <p>vart_106</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="about" class="animate-right animate">
-        <div class="about-box">
-            <h2>About Me</h2>
-            <p>Hai guys, dikenal sebagai anak sopan, Kepala nya keras seperti durian, terkenal dengan nickname varian,
-                perkenalkan nama aku Abyan. Saya adalah programmer pemula yang baru menempuh di dunia progamming pada
-                tahun 2023 pada jenjang SMK. Awal nya saya kira dunia progamming itu sangat mudah, hanya tempel konten
-                disini tempel konten disana "ini mah gampang,20 menit juga bisa jadi senior", tapi ternyata...hehe sudah
-                tau ending nya lah ya guys.</p>
-        </div>
+      <div class="about-box">
+        <h2>About Me</h2>
+        <p>
+          Hai guys, dikenal sebagai anak sopan, Kepala nya keras seperti durian,
+          terkenal dengan nickname varian, perkenalkan nama aku Abyan. Saya
+          adalah programmer pemula yang baru menempuh di dunia progamming pada
+          tahun 2023 pada jenjang SMK. Awal nya saya kira dunia progamming itu
+          sangat mudah, hanya tempel konten disini tempel konten disana "ini mah
+          gampang,20 menit juga bisa jadi senior", tapi ternyata...hehe sudah
+          tau ending nya lah ya guys.
+        </p>
+      </div>
     </section>
 
     <section id="funfact" class="animate-left animate">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Fun Fact</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="img/sw.gif" alt="funfact1">
-                <div class="card-content">
-                    <h2>I Love Art</h2>
-                    <p>Saya suka sebuah art, maksud nya seperti art digital atau tradisional, saya pernah membuat sebuah
-                        art dengan teknik tracing(ini gak di saranin,kecuali ingin belajar), karena saya tidak memiliki
-                        skill menggambar tetapi ingin bisa menggambar. Karena saya senang melihat sebuah art baik itu
-                        tergambar di buku,canvas,maupun digital. Kecuali AI Art saya membenci itu get off me generate AI
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/kafka.gif?text=Blue" alt="funfact2">
-                <div class="card-content">
-                    <h2>Biru</h2>
-                    <p>Warna favorit saya adalah biru, seperti disini sangat biru dan tenang bukan? tapi ironis
-                        nya...saya takut kedalaman air, walaupun air laut itu biru hehe</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/sparkle.gif" alt="funfact1">
-                <div class="card-content">
-                    <h2>Addict</h2>
-                    <p>Saya adalah music addict, dominan nya sih lagu luar, i dont know why because...most of my
-                        indonesian song is from vtuber like Moona Hoshinova,Mori Calliope,Hosimachi Suisei, and much
-                        more. Jadi kalo misalkan kalian nanya "kamu tau lagu indonesia ini gak?" kemungkinan besar saya
-                        tidak bakal tau kecuali di kasih beat atau lirik nya dahulu.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/stelle.gif?text=Blue" alt="funfact2">
-                <div class="card-content">
-                    <h2>Music Lunatic</h2>
-                    <p>I have so much favorite band or musician, kalo dari jepang saya suka Ave Mujica, Togenashi
-                        Togeari, Fuji Kaze, Ado, Lotus Juice, Suisei, Calliope, Kobo, Natori, Baby Metal, Mosawo. Kalau
-                        barat ada The Beatles, Bee Gees, Queen, MCR, Matchbox Twenty, Red Hot Chilli Peppers, The
-                        Weeknd, Tame Impala dan masih banyak.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="img/ff.jfif?text=Blue" alt="funfact2">
-                <div class="card-content">
-                    <h2>Emptiness and Catharsis</h2>
-                    <p>Salah satu penyemangat dalam dunia programming ku adalah lagu Emptiness and Catharsis dari band
-                        Togenashi Togeari, yang salah satu lirik nya berarti "No matter how much I get No matter how
-                        much I make it mine I can't catch up" dan "Even the things i want to grasp blur and fade away".
-                        Series Girls Band Cry juga menjadi titik balik dari saya meneruskan programming, walaupun series
-                        nya berisikan tentang band dan lagu,tetapi disana juga saya mendapatkan hype yang membuat
-                        semangat untuk hidup dan membuktikan bahwa saya bisa untuk menjadi orang yang baik dengan jalan
-                        saya sendiri</p>
-                </div>
-            </div>
+      <h2 style="text-align: center; margin-bottom: 2rem">Fun Fact</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img/sw.gif" alt="funfact1" />
+          <div class="card-content">
+            <h2>I Love Art</h2>
+            <p>
+              Saya suka sebuah art, maksud nya seperti art digital atau
+              tradisional, saya pernah membuat sebuah art dengan teknik
+              tracing(ini gak di saranin,kecuali ingin belajar), karena saya
+              tidak memiliki skill menggambar tetapi ingin bisa menggambar.
+              Karena saya senang melihat sebuah art baik itu tergambar di
+              buku,canvas,maupun digital. Kecuali AI Art saya membenci itu get
+              off me generate AI
+            </p>
+          </div>
         </div>
+        <div class="card">
+          <img src="img/kafka.gif?text=Blue" alt="funfact2" />
+          <div class="card-content">
+            <h2>Biru</h2>
+            <p>
+              Warna favorit saya adalah biru, seperti disini sangat biru dan
+              tenang bukan? tapi ironis nya...saya takut kedalaman air, walaupun
+              air laut itu biru hehe
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/sparkle.gif" alt="funfact1" />
+          <div class="card-content">
+            <h2>Addict</h2>
+            <p>
+              Saya adalah music addict, dominan nya sih lagu luar, i dont know
+              why because...most of my indonesian song is from vtuber like Moona
+              Hoshinova,Mori Calliope,Hosimachi Suisei, and much more. Jadi kalo
+              misalkan kalian nanya "kamu tau lagu indonesia ini gak?"
+              kemungkinan besar saya tidak bakal tau kecuali di kasih beat atau
+              lirik nya dahulu.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/stelle.gif?text=Blue" alt="funfact2" />
+          <div class="card-content">
+            <h2>Music Lunatic</h2>
+            <p>
+              I have so much favorite band or musician, kalo dari jepang saya
+              suka Ave Mujica, Togenashi Togeari, Fuji Kaze, Ado, Lotus Juice,
+              Suisei, Calliope, Kobo, Natori, Baby Metal, Mosawo. Kalau barat
+              ada The Beatles, Bee Gees, Queen, MCR, Matchbox Twenty, Red Hot
+              Chilli Peppers, The Weeknd, Tame Impala dan masih banyak.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/ff.jfif?text=Blue" alt="funfact2" />
+          <div class="card-content">
+            <h2>Emptiness and Catharsis</h2>
+            <p>
+              Salah satu penyemangat dalam dunia programming ku adalah lagu
+              Emptiness and Catharsis dari band Togenashi Togeari, yang salah
+              satu lirik nya berarti "No matter how much I get No matter how
+              much I make it mine I can't catch up" dan "Even the things i want
+              to grasp blur and fade away". Series Girls Band Cry juga menjadi
+              titik balik dari saya meneruskan programming, walaupun series nya
+              berisikan tentang band dan lagu,tetapi disana juga saya
+              mendapatkan hype yang membuat semangat untuk hidup dan membuktikan
+              bahwa saya bisa untuk menjadi orang yang baik dengan jalan saya
+              sendiri
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>© 2025 Abyan. All rights reserved.</p>
-            <div>
-                <a href="https://www.instagram.com/variant_a_16/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/AbyanKazama" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://discord.gg/g6EKN8B8" target="_blank"><i class="fab fa-discord"></i></a>
-                <a href="https://www.instagram.com/vart_106/" target="_blank"><i class="fas fa-palette"></i></a>
-            </div>
+      <div class="container">
+        <p>© 2025 Abyan. All rights reserved.</p>
+        <div>
+          <a href="https://www.instagram.com/variant_a_16/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://github.com/AbyanKazama" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://discord.gg/g6EKN8B8" target="_blank"
+            ><i class="fab fa-discord"></i
+          ></a>
+          <a href="https://www.instagram.com/vart_106/" target="_blank"
+            ><i class="fas fa-palette"></i
+          ></a>
         </div>
+      </div>
     </footer>
 
     <script src="slide.js"></script>
     <script src="animate.js"></script>
     <script src="navbar.js"></script>
-</body>
+    <script src="toggle.js"></script>
+  </body>
 </html>
