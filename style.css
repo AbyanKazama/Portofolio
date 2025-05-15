@@ -635,6 +635,10 @@ footer a {
     flex-direction: column;
     height: auto;
     padding: 2rem 3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
   }
 
   .carousel-wrapper {
@@ -671,9 +675,12 @@ footer a {
 
   .carousel-description {
     width: 100%;
-    padding: 1rem 0;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
     color: var(--white);
     text-align: center;
+    box-sizing: border-box;
   }
 
   .carousel-description h2 {
@@ -683,6 +690,7 @@ footer a {
 
   .carousel-description .desc {
     font-size: 1.1rem;
+    line-height: 1.6;
   }
 
   .carousel-controls {
@@ -860,6 +868,9 @@ footer a {
     flex-direction: column;
     height: auto;
     padding: 1rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
   }
 
   .carousel-images {
@@ -889,10 +900,12 @@ footer a {
 
   .carousel-description {
     width: 100%;
-    padding: 1rem 0;
-    height: auto;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
     color: var(--white);
     text-align: center;
+    box-sizing: border-box;
   }
 
   .carousel-description h2 {
@@ -993,6 +1006,7 @@ footer a {
     margin-top: 0 !important;
     padding: 0.5rem 0;
     text-align: center;
+    margin-left: 10px;
     position: relative;
   }
 
@@ -1148,6 +1162,7 @@ footer a {
 
   .carousel-container-renov {
     padding: 0.25rem 0;
+    margin-right: 10px;
   }
 
   .carousel-wrapper {
@@ -1284,6 +1299,7 @@ footer a {
   }
 
   .carousel-container-renov {
+    display: flex;
     flex-direction: column;
     height: auto;
     width: 100vw;
@@ -1291,27 +1307,31 @@ footer a {
     justify-content: center;
     margin-top: 0 !important;
     padding: 0.5rem 0;
+    margin-left: 20px;
     text-align: center;
     position: relative;
   }
 
   .carousel-wrapper {
     width: 100%;
-    margin-bottom: 0.5rem;
-    margin: 0 auto;
-    max-width: 600px;
+    max-width: 360px;
+    margin: 0 auto 0.5rem;
     box-sizing: border-box;
-    height: 100%;
+    height: auto;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .carousel-images {
     width: 100%;
-    max-width: 400px;
-    height: 300px;
+    max-width: 360px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    margin: 0 auto;
   }
 
   .carousel-img {
@@ -1321,19 +1341,10 @@ footer a {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     clip-path: none;
     border-radius: 10px;
-    margin-left: 30px;
+    margin-left: 0 !important; /* pastikan gambar tidak bergeser */
     transition: opacity 0.7s ease-in-out;
-  }
-
-  .carousel-controls {
-    bottom: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
   }
 
   .carousel-description {
@@ -1342,34 +1353,58 @@ footer a {
     text-align: center;
     height: auto;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .carousel-description h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
     margin-top: 10px;
+    margin-bottom: 0.75rem;
     font-weight: 600;
+    text-align: center;
   }
 
   .carousel-description .desc-wrapper {
-    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-bottom: 0.75rem;
   }
 
   .carousel-description .desc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     min-height: 40px;
     color: #eee;
-    line-height: 1.3;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 320px;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 6px;
   }
 
   .carousel-controls button {
     padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-    margin: 0 3px;
+    font-size: 0.8rem;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    border: none;
     transition: background-color 0.3s ease;
+  }
+
+  .carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .carousel-controls button:hover {
@@ -1582,4 +1617,3 @@ footer a {
     border-radius: 15px 15px 0 0;
   }
 }
-
